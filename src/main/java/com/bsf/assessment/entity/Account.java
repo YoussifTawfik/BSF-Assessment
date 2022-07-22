@@ -4,10 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
@@ -16,17 +14,19 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @ToString
-public class Account {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@SequenceGenerator(name = "SEQ", sequenceName = "ACCOUNTS_SEQUENCE", allocationSize = 1)
+public class Account extends BaseEntity {
 
     private Date creationDate;
 
     @NotNull
-    @Size(min = 0)
     private Double balance;
 
-    //private Client client;
+    @ManyToOne
+    @JoinColumn(name="client_id")
+    private Client client;
+
+    @ManyToOne
+    @JoinColumn(name="status_id")
+    private AccountStatus accountStatus;
 }

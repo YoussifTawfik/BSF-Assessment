@@ -1,6 +1,6 @@
 package com.bsf.assessment.exception;
 
-public class AccountNotFoundException extends Exception{
+public class AccountNotFoundException extends BSFParentException{
 
     public AccountNotFoundException(String message){
         super(message);

@@ -2,16 +2,18 @@ package com.bsf.assessment.init;
 
 import com.bsf.assessment.entity.Account;
 import com.bsf.assessment.repository.AccountRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 @Component
+@RequiredArgsConstructor
 public class DBDataInitializer {
 
-    @Autowired
-    private AccountRepository accountRepository;
+
+    private final AccountRepository accountRepository;
 
 
     public void initAccounts(){

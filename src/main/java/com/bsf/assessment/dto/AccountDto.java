@@ -3,7 +3,6 @@ package com.bsf.assessment.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.Date;
 
 @Data
@@ -16,8 +15,7 @@ public class AccountDto {
 
     private Date creationDate;
 
-//    private Long clientId;
+//    public AccountDto from(Account account){
 //
-//    private Long statusId;
-
+//    }
 }

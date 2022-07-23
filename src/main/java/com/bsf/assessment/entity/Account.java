@@ -22,11 +22,7 @@ public class Account extends BaseEntity {
     @NotNull
     private Double balance;
 
-    @ManyToOne
-    @JoinColumn(name="client_id")
-    private Client client;
+    @NotNull
+    private String code;
 
-    @ManyToOne
-    @JoinColumn(name="status_id")
-    private AccountStatus accountStatus;
 }

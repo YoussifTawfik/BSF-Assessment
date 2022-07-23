@@ -4,20 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor @NoArgsConstructor
-public class AccountDto {
+public class AccountResDto implements Serializable {
 
     private String code;
 
-    private Double balance;
-
-    private Date creationDate;
-
-//    private Long clientId;
-//
-//    private Long statusId;
-
+    private Double newBalance;
 }

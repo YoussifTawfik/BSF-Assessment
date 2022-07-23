@@ -5,7 +5,7 @@ The Main purpose of BSF assessment is to expose two APIs:
 2- get account details by account code.
 
 Layers Architecture: 
-Controller ----> Adapter ----> Service ----> Repository
+REST Controller ----> Adapter ----> Service ----> Repository
 
 Entities:
 Account ----> (Id, Code, Balance, Creation date).

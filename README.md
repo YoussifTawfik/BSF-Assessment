@@ -19,3 +19,8 @@ also you can test the APIs using postman through the below link:
 Postman Collection:
 https://drive.google.com/file/d/1E1bVqTQ8dO5JGGgiAgpmmUqgKvJqi8Iz/view?usp=sharing
 
+The app is contanrized and pushed on docker hub, you can run the app directly through the below docker command:
+
+docker container run -p 8080:8080 youssif24/bsf-server -d
+
+

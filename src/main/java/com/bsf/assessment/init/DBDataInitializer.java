@@ -3,9 +3,7 @@ package com.bsf.assessment.init;
 import com.bsf.assessment.entity.Account;
 import com.bsf.assessment.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Date;
 
 @Component

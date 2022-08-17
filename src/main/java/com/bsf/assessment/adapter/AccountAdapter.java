@@ -25,7 +25,7 @@ public class AccountAdapter {
         return transformer.transform(account);
     }
 
-    public TransferDto transfer(Map<TransferType, Account> accountMap) throws Exception {
+    public TransferDto transfer(Map<TransferType, Account> accountMap) {
         TransferDto transferDto=new TransferDto();
         transferDto.setFromAccountDetails(new AccountResDto(accountMap.get(TransferType.FROM).getCode(), accountMap.get(TransferType.FROM).getBalance()));
         transferDto.setToAccountDetails(new AccountResDto(accountMap.get(TransferType.TO).getCode(), accountMap.get(TransferType.TO).getBalance()));

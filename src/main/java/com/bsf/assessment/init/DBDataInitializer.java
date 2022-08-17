@@ -15,16 +15,18 @@ public class DBDataInitializer {
 
 
     public void initAccounts(){
-        Account account1=new Account();
-        account1.setCode("12345");
-        account1.setCreationDate(new Date());
-        account1.setBalance(1500.0);
+        Account account1=Account.builder()
+                .code("12345")
+                .creationDate(new Date())
+                .balance(2000.0)
+                .build();
         accountRepository.save(account1);
 
-        Account account2=new Account();
-        account2.setCode("67890");
-        account2.setCreationDate(new Date());
-        account2.setBalance(300.0);
+        Account account2=Account.builder()
+                .code("67890")
+                .creationDate(new Date())
+                .balance(300.0)
+                .build();
         accountRepository.save(account2);
     }
 }
